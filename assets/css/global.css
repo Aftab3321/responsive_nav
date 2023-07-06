@@ -1,0 +1,228 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Lato:wght@400;700&family=Montserrat:wght@300;400;500;600;700;800&family=Poppins:wght@300;400;500;600;700;800&display=swap');
+:root {
+    --primary-color: #FF4C00;
+    --brand-background-color: #FF4C00;
+    --secondary-background-color: #0047AB;
+    --section-background-color: rgba(97, 179, 255, 0.15);
+    --text-on-blue: #fff;
+    --normal-font-size: 18px;
+    --secondary-color: #252525;
+    --btn-font-size: 20px;
+    --heading-one: 42px;
+    --link-color: #252525;
+    --second-para-color: #637381;
+    --semi-transparent-brand-color: rgba(255, 76, 0, 0.06)
+}
+body {
+    font-family: 'Montserrat', 'sans-serif';
+}
+h1 {
+    font-size: var(--heading-one);
+}
+h2 {
+    font-size: 34px;
+}
+a {
+    color: var(--link-color);
+    text-decoration: none;
+}
+#root {
+    width: 100vw !important;
+    min-height: 100vh;
+    overflow-x: hidden;
+}
+/* general classes */
+.btn {
+    width: 240px;
+    height: 60px;
+    border-radius: 850px;
+    font-size: 22px;
+    font-family: 'Montserrat';
+    font-weight: 500;
+    color: var(--text-on-blue);
+    line-height: 28px;
+    transition: .3s ease;
+}
+/* General Classes Section End Here */
+
+/* Specific Styles Goes Here */
+
+/* css code for header starts here  */
+
+header {
+    height: 75px;
+    display: flex;
+    align-items: flex-end;
+}
+.header-container {
+    width: 90%;
+    height: 85%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0 auto;
+    font-family: inherit;
+    font-size: 500;
+}
+.header-container img {
+    width: 200px;
+}
+.header-container a {
+    color: var(--blue-text);
+}
+.button {
+    padding: 0.5rem 3rem;
+    border-radius: 68px;
+}
+ul.navbar-nav {
+    align-items: center;
+}
+.navbar {
+    width: 70%;
+    justify-content: flex-end;
+}
+.navbar-nav {
+    width: 100%;
+    justify-content: space-evenly;
+}
+.navbar a {
+    font-weight: 600;
+    font-size: 18px;
+    line-height: 22px;
+    letter-spacing: 0.01em;
+    color: #252525;
+}
+.navbar li.active > a {
+    border-bottom: 3px solid var(--primary-color);
+}
+.navbar li.active:hover {
+    border-bottom: none;
+}
+.nav-list-item:hover {
+    border-bottom: 3px solid var(--primary-color);
+}
+
+.header-container .cta > button {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    margin-left: 10px;
+    background-color: transparent;
+    transition: .5s ease;
+    font-weight: 700;
+    border: 2px solid var(--primary-color);
+}
+.header-container .cta > button:hover {
+    background-color: var(--primary-color);
+    color: var(--white-text);
+    border: 2px solid var(--primary-color);
+}
+.header {
+    min-height: 140px;
+}
+.header-strip p {
+    font-family: 'Poppins';
+    font-weight: 500;
+    margin: 0;
+}
+.header ul li a {
+    font-weight: 600;
+    font-size: var(--normal-font-size);
+    color: var(--secondary-color);
+}
+.btn-cta-header {
+    background-color: var(--brand-background-color);
+    color: var(--text-on-blue);
+    font-weight: 600;
+    font-size: var(--btn-font-size);
+    width: 183px;
+    height: 60px;
+    border-radius: 1000px;
+    transition: .3s ease;
+}
+.contact-button {
+    width: 40%;
+}
+.btn-cta-header:hover, .btn-brand:hover {
+    color: var(--text-on-blue);
+    background-color: var(--brand-background-color);
+    box-shadow: 0px 0px 20px -5px var(--primary-color);
+}
+.mobile-logo {
+    display: none;
+}
+#dark-div {
+    position: absolute;
+    top: -15px;
+    right: -7vw;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.7);
+    z-index: 90;
+}
+.display-none {
+    display: none;
+}
+/* css code for header ends here */
+
+
+
+
+
+/* Tablet responsive code goes here */
+@media screen and (max-width: 992px) {
+.navbar-toggler-icon {
+    content: "\F479" !important;
+}
+ul.navbar-nav { 
+    align-items: left;
+}
+.navbar-collapse {
+    width: 69vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    right: 25vw;
+    top: -15px;
+    background-color: #fff;
+    transition: .5s ease;
+    box-shadow: 10px 10px 15px rgba(0, 0, 0, 0.1);
+    z-index: 99;
+}
+.show2 {
+    transform: translateX(0);
+}
+.hidden {
+    transform: translateX(-100vw);
+}
+.custom-mobile-responsive {
+    height: 250px;
+    align-items: flex-start !important;
+    width: 80%;
+}
+.custom-mobile-responsive.contact-button {
+    justify-content: flex-start;
+}
+.mobile-logo {
+    display: flex;
+    width: 80%;
+    justify-content: space-between;
+    margin: 30px 0px 5px 0px;
+}
+.mobile-logo > a {
+    width: 60%;
+}
+.mobile-logo  a  img {
+    width: 100%;
+}
+#cross {
+    background: #fff;
+    color: #000;
+    border: none;
+    width: 30px;
+}
+#cross > img {
+    width: 100%;
+}
+
+}
